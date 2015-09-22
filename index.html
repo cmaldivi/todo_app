@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <link href="style/headers.css" rel="stylesheet" type="text/css">
+    <link href="style/drawer.css" rel="stylesheet" type="text/css">
+    <link href="style/lists.css" rel="stylesheet" type="text/css">
+    <link href="style/custom.css" rel="stylesheet" type="text/css">
+
+    <title>A simple TODO app</title>
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="app.js" defer></script>
+
+  </head>
+
+  <body>
+    <!-- This code is in the public domain. Enjoy! -->
+
+    <section data-type="sidebar">
+      <header>
+        <menu type="toolbar">
+          <a href="#content"><span class="icon icon-add">add</span></a>
+        </menu>
+        <h1>Actions</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#add">Add a task</a></li>
+          <li><a href="#remove">Remove a task</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section id="drawer" role="region">
+      <header class="fixed">
+        <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+        <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+        <h1>My TODO app</h1>
+      </header>
+      <div role="main">
+        <section data-type="list">
+          <ul>
+            <li><p>Trash old clothes</p></li>
+            <li><p>Buy food</p></li>
+            <li><p>Take a shower</p></li>
+            <li><p>Code all the things!</p></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </body>
+
+</html>
