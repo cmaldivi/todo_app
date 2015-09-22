@@ -33,3 +33,7 @@ div[role="main"] {
   overflow: auto;
 }
 
+section[data-type="sidebar"] > header:first-child .icon-back {
+  background-image: url(headers/images/icons/back.png);
+}
+
