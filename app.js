@@ -28,7 +28,11 @@ window.addEventListener('load', function() {
 
       var htmlTask = document.createElement('li');
       // TODO sanitize user input
-      htmlTask.innerHTML = `<p>${task.description}</p>`
+      htmlTask.innerHTML =
+        ` <label class="pack-checkbox">
+            <input type="checkbox">
+            <span></span>
+          </label><p>${task.description}</p>`;
       taskList.appendChild(htmlTask);
     }
 
@@ -54,17 +58,33 @@ window.addEventListener('load', function() {
       document.querySelector('.addDialog').hidden = true;
     }
 
+    function goEditMode() {
+      taskList.setAttribute('data-type', 'edit');
+      window.location.hash = '';
+    }
+
+    function leaveEditMode() {
+      taskList.setAttribute('data-type', '');
+    }
+
     return {
       append: appendTask,
       refresh: refreshAllTask,
       showAddDialog: showAddDialog,
-      hideAddDialog: hideAddDialog
+      hideAddDialog: hideAddDialog,
+      goEditMode: goEditMode,
+      leaveEditMode: leaveEditMode
     }
   })();
 
   document.querySelector('.actionAdd').addEventListener('click', (e)=> {
     e.preventDefault();
     taskUI.showAddDialog();
+  });
+
+  document.querySelector('.actionRemove').addEventListener('click', (e)=> {
+    e.preventDefault();
+    taskUI.goEditMode();
   });
 
   document.querySelector('.addDialog > form button[type="submit"]')
@@ -76,6 +96,5 @@ window.addEventListener('load', function() {
 
   });
 
-  console.log("Hello World!");
   taskAPI.getAll().then(taskUI.refresh);
 });

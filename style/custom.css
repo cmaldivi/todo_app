@@ -41,6 +41,10 @@ div.addDialog {
   background-color: white;
 }
 
+div.addDialog > form {
+  padding: 1.5rem;
+}
+
 section[data-type="sidebar"] > header:first-child .icon-back {
   background-image: url(headers/images/icons/back.png);
 }
