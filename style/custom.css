@@ -33,6 +33,14 @@ div[role="main"] {
   overflow: auto;
 }
 
+div.addDialog {
+  top: 5rem;
+  position: absolute;
+  height: calc(100% - 5rem);
+  width: 100%;
+  background-color: white;
+}
+
 section[data-type="sidebar"] > header:first-child .icon-back {
   background-image: url(headers/images/icons/back.png);
 }
