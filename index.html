@@ -29,8 +29,8 @@
       </header>
       <nav>
         <ul>
-          <li><a href="#add">Add a task</a></li>
-          <li><a href="#remove">Remove a task</a></li>
+          <li><a href="#action1">Action1</a></li>
+          <li><a href="#action2">Action2</a></li>
         </ul>
       </nav>
     </section>
@@ -43,6 +43,13 @@
       <div role="main">
         <section data-type="list">
           <ul>
+            <li><p>Buy food</p></li>
+            <li><p>Take a shower</p></li>
+            <li><p>Code all the things!</p></li>
+          </ul>
+        </section>
+        <section data-type="list">
+          <ul data-type="edit">
             <li>
               <label class="pack-checkbox">
                 <input type="checkbox">
@@ -50,9 +57,20 @@
               </label>
               <p>Trash old clothes</p>
             </li>
-            <li><p>Buy food</p></li>
-            <li><p>Take a shower</p></li>
-            <li><p>Code all the things!</p></li>
+            <li>
+              <label class="pack-checkbox">
+                <input type="checkbox">
+                <span></span>
+              </label>
+              <p>Buy a FxOS phone</p>
+            </li>
+            <li>
+              <label class="pack-checkbox">
+                <input type="checkbox">
+                <span></span>
+              </label>
+              <p>Contribute to Mozilla</p>
+            </li>
           </ul>
         </section>
       </div>
