@@ -6,6 +6,7 @@
     <link href="style/headers.css" rel="stylesheet" type="text/css">
     <link href="style/drawer.css" rel="stylesheet" type="text/css">
     <link href="style/lists.css" rel="stylesheet" type="text/css">
+    <link href="style/switches.css" rel="stylesheet" type="text/css">
     <link href="style/custom.css" rel="stylesheet" type="text/css">
 
     <title>A simple TODO app</title>
@@ -42,7 +43,13 @@
       <div role="main">
         <section data-type="list">
           <ul>
-            <li><p>Trash old clothes</p></li>
+            <li>
+              <label class="pack-checkbox">
+                <input type="checkbox">
+                <span></span>
+              </label>
+              <p>Trash old clothes</p>
+            </li>
             <li><p>Buy food</p></li>
             <li><p>Take a shower</p></li>
             <li><p>Code all the things!</p></li>
