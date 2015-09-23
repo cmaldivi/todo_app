@@ -6,6 +6,7 @@
     <link href="style/headers.css" rel="stylesheet" type="text/css">
     <link href="style/lists.css" rel="stylesheet" type="text/css">
     <link href="style/switches.css" rel="stylesheet" type="text/css">
+    <link href="style/input_areas.css" rel="stylesheet" type="text/css">
     <link href="style/custom.css" rel="stylesheet" type="text/css">
 
     <title>A simple TODO app</title>
@@ -23,7 +24,7 @@
       <header class="fixed">
         <menu type="toolbar">
           <a href="#"><span class="icon icon-edit">edit</span></a>
-          <a href="#"><span class="icon icon-add">add</span></a>
+          <a href="#add"><span class="icon icon-add">add</span></a>
         </menu>
         <h1>My TODO app</h1>
       </header>
@@ -60,6 +61,21 @@
             </li>
           </ul>
         </section>
+      </div>
+    </section>
+    <section role="region" class="addDialog">
+      <header class="fixed">
+        <menu type="toolbar">
+          <a href="#" class="close"><span class="icon icon-close">close</span></a>
+        </menu>
+        <h1>Add a task</h1>
+      </header>
+      <div role="main">
+        <form>
+          <p>
+            <input type="text" name="description" required="required"
+                                                  placeholder="Description of the task"></input>
+        </form>
       </div>
     </section>
   </body>

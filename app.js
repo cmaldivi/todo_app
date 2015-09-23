@@ -23,6 +23,7 @@ window.addEventListener('load', function() {
 
   window.taskUI = (() => {
     var taskList = document.getElementById('tasklist');
+    var dialog = document.querySelector('.addDialog');
 
     function appendTask(task) {
 
@@ -47,15 +48,14 @@ window.addEventListener('load', function() {
     }
 
     function showAddDialog() {
-      var dialog = document.querySelector('.addDialog');
-      dialog.hidden = false;
       dialog.querySelector('input[name="description"]').value = '';
-      // hide drawer
-      window.location.hash = '';
+      dialog.classList.add('active');
+      dialog.classList.remove('inactive');
     }
 
     function hideAddDialog() {
-      document.querySelector('.addDialog').hidden = true;
+      dialog.classList.remove('active');
+      dialog.classList.add('inactive');
     }
 
     function goEditMode() {
@@ -77,15 +77,18 @@ window.addEventListener('load', function() {
     }
   })();
 
-  document.querySelector('.actionAdd').addEventListener('click', (e)=> {
-    e.preventDefault();
+  document.querySelector('a[href="#add"]').addEventListener('click', (e)=> {
     taskUI.showAddDialog();
   });
 
-  document.querySelector('.actionRemove').addEventListener('click', (e)=> {
-    e.preventDefault();
-    taskUI.goEditMode();
-  });
+  document.querySelector('.addDialog a.close').addEventListener('click', (e) => {
+    taskUI.hideAddDialog();
+  })
+
+  //document.querySelector('.actionRemove').addEventListener('click', (e)=> {
+    //e.preventDefault();
+    //taskUI.goEditMode();
+  //});
 
   document.querySelector('.addDialog > form button[type="submit"]')
   .addEventListener('click', (e) => {

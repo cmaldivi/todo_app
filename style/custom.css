@@ -33,19 +33,32 @@ div[role="main"] {
   overflow: auto;
 }
 
-div.addDialog {
-  top: 5rem;
+section.addDialog {
   position: absolute;
-  height: calc(100% - 5rem);
+  z-index: 10;
   width: 100%;
-  background-color: white;
 }
 
-div.addDialog > form {
-  padding: 1.5rem;
+section.addDialog form {
+  padding: 2.5rem;
 }
 
-section[data-type="sidebar"] > header:first-child .icon-back {
-  background-image: url(headers/images/icons/back.png);
+section.addDialog.active {
+  animation: slideToTop 0.2s ease;
+  transform: translateY(-100%);
+}
+
+section.addDialog.inactive {
+  animation: slideToBottom 0.2s ease;
+}
+
+@keyframes slideToTop {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes slideToBottom {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
 }
 
