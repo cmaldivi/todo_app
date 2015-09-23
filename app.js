@@ -90,8 +90,8 @@ window.addEventListener('load', function() {
     //taskUI.goEditMode();
   //});
 
-  document.querySelector('.addDialog > form button[type="submit"]')
-  .addEventListener('click', (e) => {
+  document.querySelector('.addDialog form')
+  .addEventListener('submit', (e) => {
     e.preventDefault();
     var desc = document.querySelector('.addDialog input[name="description"]');
     taskAPI.add(desc.value).then(taskUI.append);

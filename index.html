@@ -7,6 +7,7 @@
     <link href="style/lists.css" rel="stylesheet" type="text/css">
     <link href="style/switches.css" rel="stylesheet" type="text/css">
     <link href="style/input_areas.css" rel="stylesheet" type="text/css">
+    <link href="style/buttons.css" rel="stylesheet" type="text/css">
     <link href="style/custom.css" rel="stylesheet" type="text/css">
 
     <title>A simple TODO app</title>
@@ -30,35 +31,7 @@
       </header>
       <div role="main">
         <section data-type="list">
-          <ul>
-            <li><p>Buy food</p></li>
-            <li><p>Take a shower</p></li>
-            <li><p>Code all the things!</p></li>
-          </ul>
-        </section>
-        <section data-type="list">
-          <ul data-type="edit">
-            <li>
-              <label class="pack-checkbox">
-                <input type="checkbox">
-                <span></span>
-              </label>
-              <p>Trash old clothes</p>
-            </li>
-            <li>
-              <label class="pack-checkbox">
-                <input type="checkbox">
-                <span></span>
-              </label>
-              <p>Buy a FxOS phone</p>
-            </li>
-            <li>
-              <label class="pack-checkbox">
-                <input type="checkbox">
-                <span></span>
-              </label>
-              <p>Contribute to Mozilla</p>
-            </li>
+          <ul id="tasklist">
           </ul>
         </section>
       </div>
@@ -75,6 +48,10 @@
           <p>
             <input type="text" name="description" required="required"
                                                   placeholder="Description of the task"></input>
+          </p>
+          <p>
+            <button class="bb-button recommend addTask" href="#" type="submit">Add</a>
+          </p>
         </form>
       </div>
     </section>
