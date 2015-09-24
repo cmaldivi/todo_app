@@ -1,0 +1,14 @@
+{
+  "name": "Tophe Todo",
+  "description": "todo app",
+  "launch_path": "/index.html",
+  "icons": {
+    "512": "/img/icon-512.jpg",
+    "128": "/img/icon-128.jpg"
+  },
+  "developer": {
+    "name": "Tophe",
+    "url": "github"
+  },
+  "default_locale": "en"
+}
