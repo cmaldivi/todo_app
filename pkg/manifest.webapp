@@ -11,6 +11,6 @@
     "url": "github"
   },
   "default_locale": "en",
-  "package_path" : "https://cmaldivi.github.io/todo_app/pkg/todo_app.zip"
+  "package_path" : "https://cmaldivi.github.io/todo_app/pkg/todo_app.zip",
   "version" : "2"
 }
