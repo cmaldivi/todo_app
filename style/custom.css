@@ -21,6 +21,10 @@ section[role="region"] > header:first-child {
     color: #FFF;
     background-color: #1742F9;
 }
+section[role="region"] > header:first-child .icon-remove {
+  background-image: url(img/delete.png);
+}
+
 section[role="region"] {
   height: 100%;
   background: #FFF none repeat scroll 0% 0%;
