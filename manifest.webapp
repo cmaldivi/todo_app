@@ -1,10 +1,10 @@
 {
   "name": "Tophe Todo",
   "description": "todo app",
-  "launch_path": "https://cmaldivi.github.io/todo_app/index.html",
+  "launch_path": "/todo_app/index.html",
   "icons": {
-    "512": "https://cmaldivi.github.io/todo_app/img/icon-512.jpg",
-    "128": "https://cmaldivi.github.io/todo_app/img/icon-128.jpg"
+    "512": "/todo_app/img/icon-512.jpg",
+    "128": "/todo_app/img/icon-128.jpg"
   },
   "developer": {
     "name": "Tophe",
