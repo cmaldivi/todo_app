@@ -1,6 +1,6 @@
 {
   "name": "Tophe Todo",
-  "description": "todo app",
+  "description": "todo app 2",
   "launch_path": "/index.html",
   "icons": {
     "512": "/img/icon-512.jpg",
@@ -12,4 +12,5 @@
   },
   "default_locale": "en",
   "package_path" : "https://cmaldivi.github.io/todo_app/todo_app.zip"
+  "version" : "2"
 }
