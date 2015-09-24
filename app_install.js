@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
   'use strict';
 
-var request = navigator.mozApps.install("http://cmaldivi.github.io/todo_app/manifest.webapp")
+var request = navigator.mozApps.install("https://cmaldivi.github.io/todo_app/manifest.webapp")
 request.onsuccess = function () {
   // Enregistre l'objet App qui est renvoyé
   var appRecord = this.result;
