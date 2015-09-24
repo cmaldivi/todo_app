@@ -1,6 +1,6 @@
 {
-  "name": "Tophe Todo",
-  "description": "todo app",
+  "name": "Tophe Todo share",
+  "description": "todo app share",
   "launch_path": "/index.html",
   "icons": {
     "512": "/img/icon-512.jpg",

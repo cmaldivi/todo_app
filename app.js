@@ -1,3 +1,30 @@
+var myBtn = document.getElementById('addNewTask');
+
+//add event listener
+myBtn.addEventListener('click', function(event) {
+    console.log("addNewTask");
+    var activity1 = new MozActivity({
+    // The name of the activity the app wants to delegate the action
+    name: "pick",
+
+    // Data required by the activity. Each application acting as an activity handler 
+    // can have it's own requirement for the activity. If the data does not fulfill
+    // all the requirement of any activity handler, the error event will be sent
+    // otherwise, the event sent depend on the activity handler itself.
+    data: {
+      type: "image/jpeg"
+    }
+  });
+
+  activity1.onsuccess = function() {
+    console.log("Activity successfuly handled");
+    var imgSrc = this.result.blob;
+  }
+  activity1.onerror = function() {
+    console.log("The activity encouter en error: " + this.error);
+  }
+});
+
 window.addEventListener('load', function() {
   'use strict';
 
