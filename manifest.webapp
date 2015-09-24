@@ -10,6 +10,6 @@
     "name": "Tophe",
     "url": "github"
   },
-  "default_locale": "en"
-  "version" : "1"
+  "default_locale": "en",
+  "package_path" : "https://cmaldivi.github.io/todo_app/todo_app.zip"
 }
