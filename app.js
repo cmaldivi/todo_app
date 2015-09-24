@@ -3,7 +3,9 @@ var myBtn = document.getElementById('addNewTask');
 //add event listener
 myBtn.addEventListener('click', function(event) {
     console.log("addNewTask");
-    var activity1 = new MozActivity({
+    
+  /*
+  var activity1 = new MozActivity({
     // The name of the activity the app wants to delegate the action
     name: "pick",
 
@@ -23,11 +25,31 @@ myBtn.addEventListener('click', function(event) {
   activity1.onerror = function() {
     console.log("The activity encouter en error: " + this.error);
   }
+  
+  var sms = new MozActivity({
+    name: "new", // Possible compose-sms in future versions
+    data: {
+      type: "websms/sms",
+      number: "+46777888999"
+    }
+  });*/
+
 });
 
 window.addEventListener('load', function() {
   'use strict';
+  
+  navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  var option = activityRequest.source;
 
+  if (option.name === "share") {
+    // Do something to handle the activity
+    console.log("received share action");
+  }
+});
+  
+  
+  
   window.taskAPI = (() => {
     var tasks = [];
 
