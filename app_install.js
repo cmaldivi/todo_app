@@ -11,3 +11,4 @@ request.onerror = function () {
   // Affiche le nom de l'erreur depuis l'objet DOMError
   alert('Installation échouée, erreur : ' + this.error.name);
 };
+});
