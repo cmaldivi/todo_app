@@ -1,7 +1,7 @@
 {
   "name": "Tophe Todo",
   "description": "todo app",
-  "launch_path": "http://cmaldivi.github.io/todo_app/index.html",
+  "launch_path": "http://cmaldivi.github.io/todo_app",
   "icons": {
     "512": "http://cmaldivi.github.io/todo_app/img/icon-512.jpg",
     "128": "http://cmaldivi.github.io/todo_app/img/icon-128.jpg"
